@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/filter_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </androidx.camera.view.PreviewView>
+
+    <Button
+        android:id="@+id/take_photo"
+        android:background="@drawable/cam_btn"
+        android:backgroundTint="@color/white"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="50dp"
+        android:elevation="4dp"
+        android:text="@string/take_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+           />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Gallery_profile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/about"
+        app:civ_border_width="5dp"
+        app:civ_border_color="#FFFFFF"
+        android:layout_marginBottom="60dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/take_photo" />
+
+
+    <ToggleButton
+        android:id="@+id/filter_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/cam_btn"
+        android:layout_marginBottom="50dp"
+        android:elevation="4dp"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/take_photo"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
